@@ -38,4 +38,4 @@ This project is a simple Budget Tracker created using HTML and CSS.
 
 ## Purpose
 
-The Budget Tracker allows users to record and view their expenses. The project will be expanded with JavaScript functionality in later weeks.
+The Budget Tracker allows users to record and view their expenses.
