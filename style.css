@@ -1,24 +1,311 @@
+/* =========================================
+   MY BUDGET TRACKER - WEEK 2 CSS
+   ========================================= */
+
+
+/* =========================================
+   GENERAL PAGE STYLING
+   ========================================= */
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #f4f6f8;
+    color: #222;
 }
 
-h1 {
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
     text-align: center;
+    background-color: #8e1552;
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
 }
+
+header img {
+    display: block;
+    margin: 0 auto 10px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   ADD EXPENSE SECTION
+   ========================================= */
 
 #add-expense {
     padding: 20px;
     margin: 20px 0;
     background-color: lightblue;
+    border-radius: 10px;
 }
+
+
+/* Advanced CSS Selector #1
+   DIRECT CHILD SELECTOR
+*/
+.add-expense-section > form {
+    max-width: 700px;
+}
+
+
+/* Form layout */
+
+#expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Form groups */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Labels */
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/* Input and select styling */
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Advanced CSS Selector #2
+   FOCUS PSEUDO-CLASS
+*/
+
+input:focus,
+select:focus {
+    outline: 3px solid rgba(142, 21, 82, 0.25);
+    border-color: #8e1552;
+}
+
+
+/* Advanced CSS Selector #3
+   NEGATION PSEUDO-CLASS
+*/
+
+input:not([type="date"]) {
+    background-color: #ffffff;
+}
+
+
+/* =========================================
+   ADD EXPENSE BUTTON
+   ========================================= */
+
+button {
+    width: fit-content;
+    padding: 12px 25px;
+    background-color: #c9185b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+
+    /* Required by assignment */
+    cursor: pointer;
+}
+
+
+/* Button hover */
+
+button:hover {
+    background-color: #a9144c;
+}
+
+
+/* =========================================
+   YOUR EXPENSES SECTION
+   ========================================= */
 
 #your-expenses {
     padding: 20px;
     margin: 20px 0;
     background-color: lightgreen;
+    border-radius: 10px;
 }
 
-.placeholder {
-    font-style: italic;
+
+/* =========================================
+   EXPENSE TABLE
+   ========================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+
+/* Table cells */
+
+th,
+td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: left;
+}
+
+
+/* Colored table header */
+
+thead th {
+    background-color: #8e1552;
+    color: white;
+}
+
+
+/* =========================================
+   ADVANCED CSS SELECTOR #4
+   DESCENDANT SELECTOR
+   ========================================= */
+
+.expenses-section td {
+    color: #333;
+}
+
+
+/* =========================================
+   ADVANCED CSS SELECTOR #5
+   :nth-child(even)
+   ========================================= */
+
+tbody tr:nth-child(even) {
+    background-color: #f8eaf0;
+}
+
+
+/* =========================================
+   TABLE ROW HOVER
+   ========================================= */
+
+tbody tr:hover {
+    background-color: #ffe1ec;
+}
+
+
+/* =========================================
+   ADVANCED CSS SELECTOR #6
+   :first-child
+   ========================================= */
+
+tbody tr:first-child {
+    font-weight: bold;
+}
+
+
+/* =========================================
+   DETAILS / SUMMARY
+   ========================================= */
+
+.help-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+
+/* summary can be clicked */
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #8e1552;
+}
+
+
+/* =========================================
+   VIDEO SECTION
+   ========================================= */
+
+.video-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+
+/* Make video responsive */
+
+.video-section iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        margin: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    .video-section iframe {
+        width: 100%;
+        height: 250px;
+    }
 }
