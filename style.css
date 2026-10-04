@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
 /* =========================================
    MY BUDGET TRACKER - WEEK 2 CSS
    ========================================= */
@@ -8,10 +9,16 @@
    ========================================= */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f6f8;
-    color: #222;
+    font-family: 'inter', sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #F1F5F9;
+    color: #1E293B;
+}
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
 
@@ -21,27 +28,41 @@ body {
 
 header {
     text-align: center;
-    background-color: #8e1552;
-    color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    padding: 30px;
+    margin: 0 auto 25px;
+    max-width: 1000px;
+    border-radius: 16px;
+    border: 1px solid #1E3A8A;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
-
 header img {
     display: block;
-    margin: 0 auto 10px;
-    background-color: white;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 auto 15px;
     padding: 8px;
-    border-radius: 10px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 header h1 {
-    margin-bottom: 5px;
+    margin: 0 0 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 header p {
-    margin-top: 5px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.95;
 }
 
 
@@ -50,10 +71,13 @@ header p {
    ========================================= */
 
 #add-expense {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: lightblue;
-    border-radius: 10px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 
@@ -70,15 +94,18 @@ header p {
 #expense-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
+    max-width: 700px;
 }
 
 
 /* Form groups */
 
-.form-group {
-    display: flex;
-    flex-direction: column;
+.form-group label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 7px;
 }
 
 
@@ -94,10 +121,16 @@ header p {
 
 input,
 select {
-    padding: 10px;
-    border: 1px solid #999;
-    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
+    color: #1E293B;
+    background-color: #FFFFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -107,8 +140,9 @@ select {
 
 input:focus,
 select:focus {
-    outline: 3px solid rgba(142, 21, 82, 0.25);
-    border-color: #8e1552;
+    outline: none;
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 
@@ -128,21 +162,23 @@ input:not([type="date"]) {
 button {
     width: fit-content;
     padding: 12px 25px;
-    background-color: #c9185b;
-    color: white;
+    background-color: #2563EB;
+    color: #FFFFFF;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-family: 'inter', sans-serif;
     font-size: 16px;
-
-    /* Required by assignment */
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 
 /* Button hover */
 
 button:hover {
-    background-color: #a9144c;
+    background-color: #1E3A8A;
+    transform: translateY(-1px);
 }
 
 
@@ -151,10 +187,13 @@ button:hover {
    ========================================= */
 
 #your-expenses {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: lightgreen;
-    border-radius: 10px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 
@@ -165,27 +204,36 @@ button:hover {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+    overflow: hidden;
 }
-
 
 /* Table cells */
 
 th,
 td {
-    border: 1px solid #555;
+    border: 1px solid #CBD5E1;
     padding: 12px;
     text-align: left;
+    font-family: 'inter', sans-serif;
+    font-size: 15px;
 }
-
 
 /* Colored table header */
 
 thead th {
-    background-color: #8e1552;
-    color: white;
+    background-color: #1E3A8A;
+    color: #FFFFFF;
+    padding: 14px 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
-
 
 /* =========================================
    ADVANCED CSS SELECTOR #4
@@ -203,7 +251,11 @@ thead th {
    ========================================= */
 
 tbody tr:nth-child(even) {
-    background-color: #f8eaf0;
+    background-color: #f8eafc;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
 }
 
 
@@ -212,7 +264,8 @@ tbody tr:nth-child(even) {
    ========================================= */
 
 tbody tr:hover {
-    background-color: #ffe1ec;
+    background-color: #EFF6FF;
+    transition: background-color 0.2s ease;
 }
 
 
@@ -288,7 +341,24 @@ footer {
 @media (max-width: 600px) {
 
     body {
-        margin: 10px;
+        margin: 0;
+        padding: 15px;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #add-expense,
+    #your-expenses,
+    .help-section,
+    .video-section {
+        padding: 18px;
+        margin: 15px auto;
     }
 
     table {
@@ -298,10 +368,6 @@ footer {
     th,
     td {
         padding: 8px;
-    }
-
-    header {
-        padding: 20px 10px;
     }
 
     .video-section iframe {
